@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import MediaLogin from "../MediaLogin/MediaLogin";
 
 const Login = () => {
   return (
@@ -26,6 +27,7 @@ const Login = () => {
           </Link>
         </p>
       </Form>
+      <MediaLogin></MediaLogin>
     </div>
   );
 };
