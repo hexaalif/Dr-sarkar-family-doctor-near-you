@@ -1,8 +1,15 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const ServicesItem = ({ serviceItem }) => {
   const { name, img, price, about } = serviceItem;
+  let navigate = useNavigate();
+
+  const handleBookNow = () => {
+    let path = `/pricing`;
+    navigate(path);
+  };
   return (
     <div className="container">
       <div className="row">
@@ -12,7 +19,9 @@ const ServicesItem = ({ serviceItem }) => {
             <Card.Title>{name}</Card.Title>
             <h4>{price}</h4>
             <Card.Text>{about}</Card.Text>
-            <Button variant="primary">Book Now</Button>
+            <Button onClick={handleBookNow} variant="primary">
+              Book Now
+            </Button>
           </Card.Body>
         </Card>
       </div>

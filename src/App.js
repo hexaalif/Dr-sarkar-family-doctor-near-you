@@ -11,6 +11,7 @@ import Services from "./Component/Pages/Services/Services";
 import Testimonial from "./Component/Pages/Testimonial/Testimonial";
 import Footer from "./Component/Shared/Footer/Footer";
 import Header from "./Component/Shared/Header/Header";
+import RequireAuth from "./Component/Shared/RequireAuth/RequireAuth";
 import NotFound from "./Component/Shared/NotFound/NotFound";
 
 function App() {
@@ -27,7 +28,14 @@ function App() {
           element={<Testimonial></Testimonial>}
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/pricing" element={<Pricing></Pricing>}></Route>
+        <Route
+          path="/pricing"
+          element={
+            <RequireAuth>
+              <Pricing></Pricing>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

@@ -1,13 +1,17 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MediaLogin from "../MediaLogin/MediaLogin";
 
 const Login = () => {
+  let navigate = useNavigate();
+  const handleLogIn = () => {
+    navigate("/home");
+  };
   return (
     <div>
       <h1 className="text-center text-dark fw-bolder my-5">Login</h1>
-      <Form className="w-50 d-block m-auto login-form">
+      <Form onSubmit={handleLogIn} className="w-50 d-block m-auto login-form">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />

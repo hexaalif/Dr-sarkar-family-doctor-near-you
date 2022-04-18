@@ -5,12 +5,19 @@ import Services from "../../Services/Services";
 import About from "../../About/About";
 import Testimonial from "../../Testimonial/Testimonial";
 import Pricing from "../../Pricing/Pricing";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import ServicesItem from "../../../Shared/ServicesItem/ServicesItem";
 import useServices from "../../../../Hooks/useServices";
 
 const Home = () => {
   const [services] = useServices();
+  let navigate = useNavigate();
+
+  const handleSeeMore = () => {
+    let path = `/services`;
+    navigate(path);
+  };
+
   return (
     <div>
       <Banner></Banner>
@@ -25,7 +32,7 @@ const Home = () => {
           ))}
         </div>
         <div className="text-center mt-3">
-          <button as={Link} to="/services" className="btn btn-primary fw-bold">
+          <button onClick={handleSeeMore} className="btn btn-primary fw-bold">
             See More
           </button>
         </div>
