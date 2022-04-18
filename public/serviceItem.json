@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "625d3d178cbbcc0ebbc6bff4",
+    "price": "$350",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/12-760x428.jpg",
+    "name": "Physical Therapy",
+    "about": "Physical therapy (PT) is care that aims to ease pain and help you function, move, and live better.\r\n"
+  },
+  {
+    "_id": "625d3d17c045184cb3d694dc",
+    "price": "$318",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/01-760x428.jpg",
+    "name": "Diagnostics",
+    "about": "Medical diagnosis is the process of determining which disease or condition explains a person's symptoms and signs.\r\n"
+  },
+  {
+    "_id": "625d3d17b62f0970f3df0998",
+    "price": "$140",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/02-760x428.jpg",
+    "name": "Therapeutics",
+    "about": "the branch of medicine concerned with the treatment of disease and the action of remedial agents.\r\n"
+  },
+  {
+    "_id": "625d3d178b3b0a2feef95263",
+    "price": "$197",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/03-760x428.jpg",
+    "name": "Laboratory",
+    "about": "A laboratory is a facility that provides controlled conditions in which scientific or technological research, experiments, and measurement may be performed.\r\n"
+  },
+  {
+    "_id": "625d3d1721ee484e617a0127",
+    "price": "$201",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/13-760x428.jpg",
+    "name": "Cardiology",
+    "about": "Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the cardiovascular system.\r\n"
+  },
+  {
+    "_id": "625d3d177d6ad6bae312c25e",
+    "price": "$145",
+    "img": "http://patterson.themerex.net/wp-content/uploads/2018/04/18-760x428.jpg",
+    "name": "Surgery",
+    "about": "Surgery is a medical or dental specialty that uses operative instrumental techniques to investigate condition such as a disease or injury.\r\n"
+  }
+]
