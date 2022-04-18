@@ -38,7 +38,6 @@ const Home = () => {
         </div>
       </div>
       <Testimonial></Testimonial>
-      <Pricing></Pricing>
     </div>
   );
 };
