@@ -1,4 +1,34 @@
-# Getting Started with Create React App
+# Dr. Sarkar - Family doctor near you
+
+---
+
+Motive of this website are:
+
+- Designed for a service provider Doctor
+- Login and Signup page Created
+- Header was used with react-router
+- Firebase authenticated login form
+- Google Sign in was enabled
+
+---
+
+---
+
+Live Link of the Site :
+
+---
+
+---
+
+Frameworks used in this site are:
+
+- React
+- React-bootstrap
+- React-router-dom
+- Firebase
+- React-firebase-hooks
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
