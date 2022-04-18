@@ -11,6 +11,7 @@ import Services from "./Component/Pages/Services/Services";
 import Testimonial from "./Component/Pages/Testimonial/Testimonial";
 import Footer from "./Component/Shared/Footer/Footer";
 import Header from "./Component/Shared/Header/Header";
+import NotFound from "./Component/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/pricing" element={<Pricing></Pricing>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
