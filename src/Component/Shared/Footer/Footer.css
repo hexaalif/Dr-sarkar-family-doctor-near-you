@@ -1,0 +1,13 @@
+footer {
+    background-color: rgb(201, 152, 224);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  footer p {
+    color: rgb(0, 0, 0);
+    font-style: italic;
+  }
+  .last_color {
+    color: rgb(91, 0, 177);
+  }

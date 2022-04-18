@@ -1,0 +1,9 @@
+.navbar-light .navbar-nav .nav-link{
+    color: rgb(54, 49, 49);
+    font-size: 18px;
+    font-weight: 600;
+}
+.appoint-btn{
+    background-color: #D90267;
+    border: none;
+}

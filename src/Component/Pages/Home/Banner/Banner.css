@@ -1,0 +1,22 @@
+.cover-img{
+    background-image: url(../../../../images/doctor1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ban_overlay{
+    background-image: linear-gradient(to left, rgba(169, 66, 238, 0.4), rgba(255, 255, 255, 0.2));
+    height: 650px;
+}
+.ban-content{
+    background-color: white;
+    padding: 30px;
+    width: 450px;
+    margin-top: 9%;
+}
+.header-title{
+    font-size: 70px;
+    font-weight: 700;
+}
+.dr-span{
+    color: #D90267;
+}

@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "./Component/Pages/About/About";
+import Blog from "./Component/Pages/Blog/Blog";
+import Home from "./Component/Pages/Home/Home/Home";
+import Login from "./Component/Pages/Login/Login/Login";
+import SignUp from "./Component/Pages/Login/SignUp/SignUp";
+import Pricing from "./Component/Pages/Pricing/Pricing";
+import Services from "./Component/Pages/Services/Services";
+import Testimonial from "./Component/Pages/Testimonial/Testimonial";
+import Footer from "./Component/Shared/Footer/Footer";
+import Header from "./Component/Shared/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route
+          path="/testimonial"
+          element={<Testimonial></Testimonial>}
+        ></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/pricing" element={<Pricing></Pricing>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/signup" element={<SignUp></SignUp>}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
