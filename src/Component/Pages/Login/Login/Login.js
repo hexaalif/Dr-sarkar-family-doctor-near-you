@@ -2,14 +2,21 @@ import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../../firebase.init";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSendPasswordResetEmail,
+} from "react-firebase-hooks/auth";
 import MediaLogin from "../MediaLogin/MediaLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
@@ -30,6 +37,17 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("please enter the email");
+    }
+  };
+
   return (
     <div>
       <h1 className="text-center text-dark fw-bolder my-5">Login</h1>
@@ -62,6 +80,16 @@ const Login = () => {
           <Link to="/signup" className="text-success fw-bold">
             Sign up now
           </Link>
+        </p>
+        <p>
+          Forgot Password?{" "}
+          <Button
+            className="text-info text-decoration-none btn bg-white border-0 "
+            onClick={resetPassword}
+          >
+            Reset Password
+          </Button>
+          <ToastContainer />
         </p>
       </Form>
       <MediaLogin></MediaLogin>
